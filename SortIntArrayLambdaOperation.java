@@ -16,7 +16,8 @@ class Solution {
 
         
        return  Arrays.stream(nums).boxed().sorted((a, b) -> map.get(a) != map.get(b) ? map.get(a) - map.get(b) : b - a)
-            .mapToInt(n -> n)
+            //.mapToInt(n -> n) this also works
+            .mapToInt(Integer::intValue)
             .toArray();
                                 
     }
